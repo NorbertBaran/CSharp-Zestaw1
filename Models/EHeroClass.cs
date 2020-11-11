@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace NFO{
-    enum EHeroClass{
+    public enum EHeroClass{
         barbarzyńca,
         paladyn,
         amazonka

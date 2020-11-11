@@ -3,29 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace NFO{
-    class Location{
+    public class Location{
         public Location(ELocationNames name){
             Name=name;
             NonPlayerCharacters=NPCList.Get(name);
+            IsUnlocked = name != ELocationNames.Radom && name != ELocationNames.Sonsowiec;
         }
 
         public ELocationNames Name{get;}
         public List<NonPlayerCharacter> NonPlayerCharacters{get;}
+        public bool IsUnlocked { get; set; }
     }
 
-    enum ELocationNames{
+    public enum ELocationNames{
         Calimport,
         Neverwinter,
-        Silverymoon
+        Silverymoon,
+        Radom,
+        Sonsowiec,
+        Bydgoszcz
     }
 
-    static class NPCList{
+    public static class NPCList{
         public static List<NonPlayerCharacter> Get(ELocationNames location){
             return new List<NonPlayerCharacter>{
-                new NonPlayerCharacter("Akara"),
-                new NonPlayerCharacter("Charsi")
+                new NonPlayerCharacter("Akara", Dialogs.AkaraDialog),
+                new NonPlayerCharacter("Charsi", Dialogs.CharsiDialog)
             };
         }
     }
-
 }

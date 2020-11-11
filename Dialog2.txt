@@ -1,0 +1,13 @@
+NPC: "Witam, w czym mogę pomóc"
+    Hero: "Dzień dobry, poszukuję łuku"
+        NPC: "Aktualnie nie posiadamy na magazynie" <KONIEC>
+    Hero: "Dzień dobry, potrzebuję nowy miecz"
+        NPC: "Proszę uprzejmie, mały 200 sztuk złota, średni 1000, duży 5000"
+            Hero: "Poproszę mały" <KONIEC>
+            Hero: "Poprszę średni" <KONIEC>
+            Hero: "Poproszę duży <KONIEC>
+            Hero: "Dziękuję bardzo, ale są dla mnie zbyt drogie" <KONIEC>
+    Hero: "Proszę coś zaproponować"
+        NPC: "Mamy bardzo dobrą kuszę za jedyne 2500 sztuk złota"
+            Hero: "Tak, poproszę" <KONIEC>
+            Hero: "Nie, dziękuję. Za droga jest dla mnie" <KONIEC>

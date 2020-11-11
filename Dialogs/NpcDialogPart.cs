@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace NFO{
-    class NpcDialogPart{
-        public NpcDialogPart(){}
-        public NpcDialogPart(string dialogPart){
-            DialogPart=dialogPart;
-        }
+    public class NpcDialogPart : IDialogPart{
         public NpcDialogPart(string dialogPart, List<HeroDialogPart> heroDialogParts){
             DialogPart=dialogPart;
             HeroDialogParts=heroDialogParts;
         }
 
-        public string DialogPart{get; set;}
+        private string DialogPart;
         public List<HeroDialogPart> HeroDialogParts{get; set;}
+        public string GetContent(){
+            return DialogPart;
+        }
     }
 }
